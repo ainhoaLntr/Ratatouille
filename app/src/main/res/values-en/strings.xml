@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Ratatouille</string>
+    <string name="titre_menu">Menu composition</string>
+    <string name="titre_entree">Starters</string>
+    <string name="titre_plat">Dishes</string>
+    <string name="titre_dessert">Desserts</string>
+    <string name="titre_quantite">Quantity</string>
+
+    <string-array name="entrees">
+        <item>None</item>
+        <item>Homemade foie gras</item>
+        <item>Smocked salmon</item>
+        <item>Green salad</item>
+        <item>Fried king prawns</item>
+    </string-array>
+    <string-array name="plats">
+        <item>Aucun</item>
+        <item>Duck breast</item>
+        <item>Chef burger</item>
+        <item>Lasagna</item>
+        <item>Hake steak</item>
+    </string-array>
+    <string-array name="desserts">
+        <item>None</item>
+        <item>Tiramisu</item>
+        <item>Crème brûlée</item>
+        <item>Tarte tatin</item>
+        <item>Chocolate fondant</item>
+    </string-array>
+    <string-array name="num_quantite">
+        <item>None</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string name="recap">Summary</string>
+    <string name="remarques">Comments</string>
+
+    <string name="btn_omni">Omnivorous</string>
+    <string name="btn_vege">Vegetarian</string>
+    <string name="btn_vegan">Vegan</string>
+
+    <string name="btn_ajouter">ADD</string>
+    <string name="btn_enregistrer">SAVE</string>
+    <string name="btn_annuler">CANCEL</string>
+
+    <string name="titre_param">Menu management</string>
+    <string name="titre_nouveau">Add novelty</string>
+    <string name="btnr_entree">Starter</string>
+    <string name="btnr_plat">Dish</string>
+    <string name="btnr_dessert">Dessert</string>
+</resources>

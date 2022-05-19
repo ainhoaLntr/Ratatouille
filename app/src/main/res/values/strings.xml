@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Ratatouille</string>
+    <string name="titre_menu">Composition menu</string>
+    <string name="titre_entree">Entrées</string>
+    <string name="titre_plat">Plats</string>
+    <string name="titre_dessert">Desserts</string>
+    <string name="titre_quantite">Quantité</string>
+
+    <string-array name="entrees">
+        <item>Aucun</item>
+        <item>Foie gras fait maison</item>
+        <item>Saumon fumé</item>
+        <item>Salade verte</item>
+        <item>Gambas poelées</item>
+    </string-array>
+    <string-array name="plats">
+        <item>Aucun</item>
+        <item>Magret de canard</item>
+        <item>Burger du chef</item>
+        <item>Lasagnes</item>
+        <item>Pavé de merlu</item>
+    </string-array>
+    <string-array name="desserts">
+        <item>Aucun</item>
+        <item>Tiramisu</item>
+        <item>Crème brûlée</item>
+        <item>Tarte tatin</item>
+        <item>Fondant au chocolat</item>
+    </string-array>
+    <string-array name="num_quantite">
+        <item>Aucun</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string name="recap">Récapitulatif</string>
+    <string name="remarques">Remarques</string>
+
+    <string name="btn_omni">Omnivore</string>
+    <string name="btn_vege">Végétarien</string>
+    <string name="btn_vegan">Vegan</string>
+
+    <string name="btn_ajouter">AJOUTER</string>
+    <string name="btn_enregistrer">ENREGISTRER</string>
+    <string name="btn_annuler">ANNULER</string>
+
+    <string name="titre_param">Gestion menu</string>
+    <string name="titre_nouveau">Ajout nouveauté</string>
+    <string name="btnr_entree">Entrée</string>
+    <string name="btnr_plat">Plat</string>
+    <string name="btnr_dessert">Dessert</string>
+</resources>

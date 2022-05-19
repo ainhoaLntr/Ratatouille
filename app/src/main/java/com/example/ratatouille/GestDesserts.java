@@ -1,0 +1,84 @@
+package com.example.ratatouille;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+
+public class GestDesserts extends AppCompatActivity {
+
+    private LinearLayout ll_listeCheckbox;
+    private Button btn_suppr, btn_ajouter;
+    private EditText et_nouveau;
+    private ArrayList<CheckBox> listeCheck;
+    private Spinner s_desserts;
+    private EditText et_dessertAModif;
+    private Button btn_modif;
+
+    public void afficherCheck() {
+        ll_listeCheckbox.clearFocus();
+        listeCheck.clear();
+        for (int i = 0; i < Modele.lesDesserts.size(); i++) {
+            CheckBox check = new CheckBox(getApplicationContext());
+            check.setText(Modele.lesDesserts.get(i));
+            listeCheck.add(check);
+            ll_listeCheckbox.addView(check);
+        }
+    }
+
+    public void remplirSpinDesserts() {
+        ArrayAdapter<String> listeDesserts = new ArrayAdapter<String>(
+                this,
+                android.R.layout.simple_list_item_1);
+        for (int i = 0; i < Modele.lesDesserts.size(); i++) {
+            listeDesserts.add(Modele.lesDesserts.get(i));
+        }
+        s_desserts.setAdapter(listeDesserts);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_gest_desserts);
+
+        ll_listeCheckbox = findViewById(R.id.ll_listeCheckbox);
+        btn_suppr = findViewById(R.id.btn_suppr);
+        btn_ajouter = findViewById(R.id.btn_ajouter);
+        et_nouveau = findViewById(R.id.et_nouveau);
+        s_desserts = findViewById(R.id.s_plats);
+        et_dessertAModif = findViewById(R.id.et_platAModif);
+        btn_modif = findViewById(R.id.btn_modif);
+
+        Modele.initPlats();
+        afficherCheck();
+        remplirSpinDesserts();
+
+        btn_suppr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for (int i = listeCheck.size(); i >= 0; i--) {
+                    /*if (listeCheck.indexOf(i))
+                    {
+                        remove (Modele.lesPlats.get(i));
+                    }*/
+                }
+                afficherCheck();
+            }
+        });
+
+        btn_modif.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //mettre à jour le plat modifié dans le modèle
+            }
+        });
+    }
+}

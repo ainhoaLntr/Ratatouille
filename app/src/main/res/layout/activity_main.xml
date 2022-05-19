@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- menu avec logo et titre -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/logoresto" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/titre_menu"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+
+    <!-- barre de séparation -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/noir"
+        android:padding="10dp" />
+
+    <!-- choix des composants du menu (avec spinners) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/titre_entree"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/s_entrees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/entrees"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/titre_plat"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/s_plats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/plats"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="@string/titre_dessert"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/s_desserts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/desserts"
+                android:minHeight="48dp"
+                android:padding="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- choix de la quantité -->
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="TextView"
+        android:textIsSelectable="true"
+        android:textSize="18sp"
+        tools:text="@string/titre_quantite" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:weightSum="10">
+
+        <Spinner
+            android:id="@+id/s_quantite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:entries="@array/num_quantite"
+            android:minHeight="48dp"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/et_quantite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:text="@string/titre_quantite"
+            android:autofillHints="" />
+    </LinearLayout>
+
+
+    <!-- choix du régime -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/btn_omni" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_vege" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_vegan" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <!-- ajout -->
+    <Button
+        android:id="@+id/btn_ajouter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/btn_ajouter"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+
+    <!-- récapitulatif -->
+    <TextView
+        android:id="@+id/tv_recap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="@string/recap"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et_remarques"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textCapSentences|textAutoCorrect"
+        android:text="@string/remarques"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <!-- annulation et enregistrement -->
+    <Button
+        android:id="@+id/btn_gestPlats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GESTION DES PLATS"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="10">
+
+        <Button
+            android:id="@+id/btn_enregistrer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:padding="10dp"
+            android:text="@string/btn_enregistrer"
+            android:textColor="@color/teal_700"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_annuler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:background="@color/gris_fonce"
+            android:padding="10dp"
+            android:text="@string/btn_annuler"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>
